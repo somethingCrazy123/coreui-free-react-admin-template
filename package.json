@@ -1,22 +1,18 @@
 {
-  "name": "@coreui/coreui-free-react-admin-template",
+  "name": "nri-admin",
   "version": "5.7.0",
-  "description": "CoreUI Free React Admin Template",
-  "homepage": ".",
+  "description": "NRI VehicleCare admin panel (staff and admins)",
   "bugs": {
     "url": "https://github.com/coreui/coreui-free-react-admin-template/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:coreui/coreui-free-react-admin-template.git"
   },
   "license": "MIT",
   "author": "The CoreUI Team (https://github.com/orgs/coreui/people)",
   "scripts": {
+    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
-    "lint": "eslint",
-    "serve": "vite preview",
-    "start": "vite"
+    "preview": "vite preview",
+    "serve": "vite preview"
   },
   "dependencies": {
     "@coreui/chartjs": "^4.2.0",
@@ -26,6 +22,7 @@
     "@coreui/react": "^5.13.0",
     "@coreui/react-chartjs": "^3.0.0",
     "@coreui/utils": "^2.0.2",
+    "@hookform/resolvers": "^5.9.2",
     "@popperjs/core": "^2.11.8",
     "chart.js": "^4.5.1",
     "classnames": "^2.5.1",
@@ -33,10 +30,12 @@
     "prop-types": "^15.8.1",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
+    "react-hook-form": "^7.91.0",
     "react-redux": "^9.3.0",
     "react-router-dom": "^7.18.4",
     "redux": "5.0.1",
-    "simplebar-react": "^3.3.2"
+    "simplebar-react": "^3.3.2",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.1.1",
@@ -51,5 +50,6 @@
     "prettier": "3.9.9",
     "sass": "^1.105.0",
     "vite": "^8.3.0"
-  }
+  },
+  "private": true
 }

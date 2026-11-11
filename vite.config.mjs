@@ -3,17 +3,16 @@ import react from '@vitejs/plugin-react'
 import path from 'node:path'
 import autoprefixer from 'autoprefixer'
 
+// Admin panel: http://localhost:3001 (the NestJS API uses 3000, the customer site uses 5173)
 export default defineConfig(() => {
   return {
-    base: './',
+    base: '/',
     build: {
       outDir: 'build',
     },
     css: {
       postcss: {
-        plugins: [
-          autoprefixer({}), // add options if needed
-        ],
+        plugins: [autoprefixer({})],
       },
     },
     plugins: [react()],
@@ -27,10 +26,7 @@ export default defineConfig(() => {
       extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.scss'],
     },
     server: {
-      port: 3000,
-      proxy: {
-        // https://vitejs.dev/config/server-options.html
-      },
+      port: 3001,
     },
   }
 })
